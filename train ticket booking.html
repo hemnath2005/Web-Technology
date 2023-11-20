@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<center><title>Online Train Reservation System</title><center>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        .background { 
+            position: absolute; 
+            height: 100%; 
+            width: 100%; 
+            background-image: url( "train1.jpeg"); 
+            background-size: cover; 
+            background-position:center; 
+            filter: blur(10px); 
+            z-index: -1; 
+        } 
+         form {
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body style="background-color:rgb(4, 125, 147);">
+    <div class="background"></div> 
+    <div class="text-container"> 
+    </div> <center>
+
+    <h2>Online Train Reservation System</h2>
+
+    <form action="process_reservation.php" method="post">
+        <label for="from">From:</label>
+        <input type="text" id="from" name="from" required></br></br>
+
+        <label for="to">To:</label>
+        <input type="text" id="to" name="to" required></br></br>
+
+        <label for="date">Departure Date:</label>
+        <input type="date" id="date" name="date" required></br></br>
+
+        <label for="class">Class:</label>
+        <select id="class" name="class" required><br>
+            <option value="economy">Economy</option>
+            <option value="business">Business</option>
+            <option value="first-class">First Class</option>
+        </select></br></br>
+
+        <label for="passengers">Number of Passengers:</label>
+        <input type="number" id="passengers" name="passengers" min="1" required></br></br>
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required></br></br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required></br></br>
+
+        <button type="submit">Reserve Now</button>
+    </form>
+
+</body>
+</html>

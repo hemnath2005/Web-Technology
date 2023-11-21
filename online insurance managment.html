@@ -1,77 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>Online Insurance Management</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
         }
 
-        h1 {
-            text-align: center;
-        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: auto;
+        } 
+        .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #e7f3ec;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
 
-        form {
-            max-width: 400px;
-            margin: 20px auto;
-        }
-
-        label, input {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        input[type="submit"] {
+        .header {
             background-color: #4CAF50;
             color: white;
             padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            text-align: center;
         }
-        button {
-            padding: 13px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 200px;
-            cursor: pointer;
+
+        .form-group {
+            margin-bottom: 15px;
         }
-        button:hover {
-            background-color: #45a049;
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
         }
-        input[type="submit"]:hover {
-            background-color: #45a049;
+
+        .form-control {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
         }
     </style>
 </head>
-<body>
+<body style="background-color:rgb(203, 204, 205);">
 
-    <h1>Online Insurance Management</h1>
+<div class="container">
+    <div class="header">
+        <h2>Online Insurance Management</h2>
+    </div>
+    <form>
+    <div >
+        <label >Insurance ID:</label>
+        <input class="form-control" type="text" name="insurance_id" placeholder="Enter Insurance ID">
+    </div><br>
 
-    <form id="insuranceForm">
-        <label for="policyHolder">Policy Holder Name:</label>
-        <input type="text" id="policyHolder" name="policyHolder" required>
+    <div >
+        <label >Customer Name:</label>
+        <input class="form-control" type="text" name="customer_name" placeholder="Enter Customer Name">
+    </div><br>
 
-        <label for="insuranceType">Insurance Type:</label>
-        <select id="insuranceType" name="insuranceType" required>
-            <option value="life">Life Insurance</option>
-            <option value="auto">Auto Insurance</option>
-            <option value="health">Health Insurance</option>
-        </select>
+    <div >
+        <label>Policy Type:</label><br>
+        <input class="form-control" type="text" name="policy_type" placeholder="Enter Policy Type">
+    </div><br>
 
-        <label for="policyAmount">Policy Amount:</label>
-        <input type="number" id="policyAmount" name="policyAmount" required>
+    <div >
+        <label >Sum Insured:</label>
+        <input class="form-control" type="text" name="sum_insured" placeholder="Enter Sum Insured">
+    </div><br>
 
-        <label for="startDate">Policy Start Date:</label>
-        <input type="date" id="startDate" name="startDate" required>
-
-        <label for="endDate">Policy End Date:</label>
-        <input type="date" id="endDate" name="endDate" required>
-        <button type="submit"><a href="insurance details.html">Submit Insurance Application</a></p></button>
-        <p class="message">Not registered? <a href="insurance details.html">Create an account</a></p>
-    </form>
-
+    <div >
+        <label >Premium Amount:</label>
+        <input class="form-control" type="text" name="premium_amount" placeholder="Enter Premium Amount">
+    </div><br>
+    <button type="submit">submit</button>
+</div><br>
+</form>
 </body>
 </html>

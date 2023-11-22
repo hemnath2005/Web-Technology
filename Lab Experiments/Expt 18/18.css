@@ -1,0 +1,12 @@
+.header {
+    text-align: center;
+    background-image: linear-gradient(45deg,#5b7372,#50db8a);
+}
+body{
+    background-image: linear-gradient(45deg,#befdfa,#1e8348);
+}
+
+.content{
+    text-align: left;
+  
+}
